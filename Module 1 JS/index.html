@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>🎉 Your Community Event Portal</h1>
+            <p>Discover, connect, and celebrate with your neighbors! Find amazing events happening near you.</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#events" class="nav-link active">All Events</a></li>
+                <li><a href="#register" class="nav-link">Register</a></li>
+                <li><a href="#my-registrations" class="nav-link">My Registrations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <h2>🔍 Find Your Perfect Event</h2>
+            <p class="section-subtitle">Use the filters below to discover events that match your interests</p>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="categoryFilter">👉 What are you interested in?</label>
+                    <select id="categoryFilter">
+                        <option value="">✨ All Categories</option>
+                        <option value="music">🎵 Music</option>
+                        <option value="workshop">📚 Workshop</option>
+                        <option value="sports">⚽ Sports</option>
+                        <option value="social">👥 Social</option>
+                        <option value="food">🍽️ Food</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="locationFilter">📍 Where do you want to go?</label>
+                    <select id="locationFilter">
+                        <option value="">✨ All Locations</option>
+                        <option value="downtown">Downtown</option>
+                        <option value="uptown">Uptown</option>
+                        <option value="suburb">Suburb</option>
+                        <option value="waterfront">Waterfront</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="searchInput">🔎 Looking for something specific?</label>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Try typing 'Baking', 'Jazz', or 'Soccer'..." 
+                        autocomplete="off"
+                    >
+                </div>
+
+                <button id="resetFilters" class="btn btn-secondary">🔄 Start Over</button>
+            </div>
+        </section>
+
+        <!-- Events Grid Section -->
+        <section id="events" class="events-section">
+            <h2>🎊 Upcoming Events in Your Community</h2>
+            <p class="section-subtitle">Click on any event card to learn more or register today!</p>
+            <div id="eventsContainer" class="events-grid">
+                <!-- Events will be rendered here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section id="register" class="register-section">
+            <h2>✍️ Ready to Join?</h2>
+            <p class="section-subtitle">Complete the form below to register for your chosen event. We can't wait to see you there!</p>
+            <form id="registrationForm" class="registration-form">
+                <div class="form-group">
+                    <label for="userName">👤 What's your name?</label>
+                    <input 
+                        type="text" 
+                        id="userName" 
+                        name="userName" 
+                        required
+                        placeholder="John Doe"
+                    >
+                    <span class="error-message" id="userNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">✉️ Your email address</label>
+                    <input 
+                        type="email" 
+                        id="userEmail" 
+                        name="userEmail" 
+                        required
+                        placeholder="your.email@example.com"
+                    >
+                    <span class="error-message" id="userEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventSelect">🎫 Which event are you interested in?</label>
+                    <select id="eventSelect" name="eventSelect" required>
+                        <option value="">👈 Pick an event from the list above...</option>
+                    </select>
+                    <span class="error-message" id="eventSelectError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberOfTickets">👥 How many people are coming?</label>
+                    <input 
+                        type="number" 
+                        id="numberOfTickets" 
+                        name="numberOfTickets" 
+                        min="1" 
+                        max="5" 
+                        value="1"
+                        required
+                    >
+                    <span class="form-hint">You can register up to 5 people</span>
+                    <span class="error-message" id="numberOfTicketsError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">🎯 Register Now - Let's Go!</button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="alert alert-success" style="display: none;">
+                🎉 Awesome! You're all set! A confirmation email is heading your way. See you there! 👋
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="alert alert-error" style="display: none;">
+                ⚠️ Oops! Something went wrong. Please check your information and try again.
+            </div>
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+        </section>
+
+        <!-- My Registrations Section -->
+        <section id="my-registrations" class="my-registrations-section">
+            <h2>💝 My Event Bookings</h2>
+            <p class="section-subtitle">Here are all the events you've registered for. We're excited to see you!</p>
+            <div id="registrationsContainer" class="registrations-list">
+                <!-- User registrations will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Debug Info Section -->
+        <section class="debug-section" id="debugSection">
+            <h3>� Behind the Scenes (Technical Details)</h3>
+            <button id="toggleDebug" class="btn btn-secondary">👀 Show Debug Info</button>
+            <pre id="debugInfo" style="display: none;"></pre>
+        </section>
+    </main>
+
+    <!-- Main JavaScript File -->
+    <script src="main.js"></script>
+</body>
+</html>

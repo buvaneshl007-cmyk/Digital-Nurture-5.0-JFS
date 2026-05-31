@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    
+    <!-- Exercise 1: External Stylesheet Link -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Exercise 5: Google Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Exercise 1: Internal Styles -->
+    <style>
+        /* Exercise 1: Internal CSS - Body background */
+        body {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- EXERCISE 1: INLINE STYLES -->
+    <!-- Exercise 1: Inline style making heading red -->
+    <h1 id="mainHeader" style="color: red; text-align: center; padding: 20px;">
+        Welcome to Local Community Event Portal
+    </h1>
+
+    <!-- NAVIGATION (Exercise 6: Link and List Styling) -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER SECTION (Exercise 4: Color & Background) -->
+    <header class="header-section">
+        <h2>Upcoming Community Events</h2>
+        <p class="header-description">Discover amazing events happening in your city</p>
+    </header>
+
+    <!-- EXERCISE 3: SELECTORS PLAYGROUND -->
+    <!-- Universal selector, element selector, class selector, ID selector used in CSS -->
+    
+    <!-- EVENT CARDS (Exercise 3: Class selector .eventCard) -->
+    <div class="container">
+        <div class="eventCard">
+            <h3>Spring Festival</h3>
+            <p>Join us for a day of music, food, and cultural celebrations!</p>
+            <span class="event-date">June 15, 2026</span>
+            <a href="#" class="cta-button">Learn More</a>
+        </div>
+
+        <div class="eventCard">
+            <h3>Community Cleanup Drive</h3>
+            <p>Help keep our neighborhood clean and beautiful. Everyone welcome!</p>
+            <span class="event-date">June 22, 2026</span>
+            <a href="#" class="cta-button">Join Event</a>
+        </div>
+
+        <div class="eventCard">
+            <h3>Local Talent Night</h3>
+            <p>Showcase your talents or enjoy performances from local artists.</p>
+            <span class="event-date">June 29, 2026</span>
+            <a href="#" class="cta-button">Register Now</a>
+        </div>
+
+        <div class="eventCard">
+            <h3>Youth Sports Tournament</h3>
+            <p>Friendly competition for kids and teens. Multiple sports available.</p>
+            <span class="event-date">July 5, 2026</span>
+            <a href="#" class="cta-button">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- EXERCISE 7: TABLE STYLING -->
+    <section class="events-admin">
+        <h2>Events Admin Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Attendees</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Spring Festival</td>
+                    <td>June 15, 2026</td>
+                    <td>Central Park</td>
+                    <td>250</td>
+                    <td>Confirmed</td>
+                </tr>
+                <tr>
+                    <td>Community Cleanup</td>
+                    <td>June 22, 2026</td>
+                    <td>Main Street</td>
+                    <td>80</td>
+                    <td>Confirmed</td>
+                </tr>
+                <tr>
+                    <td>Talent Night</td>
+                    <td>June 29, 2026</td>
+                    <td>Community Hall</td>
+                    <td>150</td>
+                    <td>Planning</td>
+                </tr>
+                <tr>
+                    <td>Sports Tournament</td>
+                    <td>July 5, 2026</td>
+                    <td>Sports Complex</td>
+                    <td>180</td>
+                    <td>Confirmed</td>
+                </tr>
+                <tr>
+                    <td>Art Workshop</td>
+                    <td>July 12, 2026</td>
+                    <td>Arts Center</td>
+                    <td>45</td>
+                    <td>Planning</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- EXERCISE 8: BOX MODEL & LAYOUT -->
+    <section class="box-model-demo">
+        <h2>Box Model Example</h2>
+        <div class="box-example">
+            <p>This div demonstrates margin, padding, and border properties.</p>
+        </div>
+        <div class="box-example-outline">
+            <p>This element has an outline to highlight its boundaries.</p>
+        </div>
+    </section>
+
+    <!-- EXERCISE 9: MULTIPLE COLUMNS -->
+    <section class="news-bulletin">
+        <h2>Community News Bulletin</h2>
+        <article class="multi-column-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+        </article>
+    </section>
+
+    <!-- EXERCISE 6: LINK STYLING & PSEUDO-CLASSES -->
+    <section class="links-demo">
+        <h2>Important Links</h2>
+        <ul class="important-links">
+            <li><a href="#events">View All Events</a></li>
+            <li><a href="#register">Register as Volunteer</a></li>
+            <li><a href="#feedback">Send Feedback</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+        </ul>
+    </section>
+
+    <!-- EXERCISE 8: FORM STYLING -->
+    <section class="form-section">
+        <h2>Event Registration Form</h2>
+        <form class="registration-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event">Select Event:</label>
+                <select id="event" name="event">
+                    <option>Spring Festival</option>
+                    <option>Community Cleanup</option>
+                    <option>Talent Night</option>
+                    <option>Sports Tournament</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Additional Comments:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us more..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Registration</button>
+        </form>
+    </section>
+
+    <!-- RESPONSIVE TEST SECTION (Exercise 10: Media Queries) -->
+    <section class="responsive-section">
+        <h2>Responsive Layout Test</h2>
+        <div class="responsive-grid">
+            <div class="responsive-box">Box 1</div>
+            <div class="responsive-box">Box 2</div>
+            <div class="responsive-box">Box 3</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Contact us: <a href="mailto:info@community.local">info@community.local</a></p>
+    </footer>
+
+</body>
+</html>

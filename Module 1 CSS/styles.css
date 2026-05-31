@@ -1,0 +1,604 @@
+/* ============================================
+   LOCAL COMMUNITY EVENT PORTAL - CSS STYLESHEET
+   ============================================ */
+
+/* EXERCISE 1 & 3: UNIVERSAL SELECTOR - Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================
+   EXERCISE 5: TYPOGRAPHY - Font Families and Text Styling
+   ============================================ */
+
+/* Exercise 5: Using Google Fonts */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Exercise 3: Element selectors for headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0 1rem 0;
+    color: #007BFF;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0056b3;
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* ============================================
+   EXERCISE 4: COLOR & BACKGROUND STYLING
+   ============================================ */
+
+/* Exercise 4: Background gradient for header section */
+.header-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.header-description {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    margin: 0.5rem 0;
+}
+
+/* Exercise 5: Text transformations and spacing */
+.header-section h2 {
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   EXERCISE 3: CLASS SELECTOR - Event Cards
+   ============================================ */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    justify-content: center;
+}
+
+/* Exercise 8: Box Model with padding, margin, and border */
+.eventCard {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for cards */
+.eventCard:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.event-date {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    font-weight: 600;
+}
+
+/* Exercise 2: Comment structure for CSS sections */
+/* Style for main CTA button - Exercise 2 */
+.cta-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* ============================================
+   EXERCISE 6: NAVIGATION & LINK STYLING
+   ============================================ */
+
+.navbar {
+    background-color: #333;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Exercise 3: Grouping selector for list items */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.nav-list li {
+    list-style-position: inside;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Exercise 6: Link pseudo-classes */
+.nav-list a:link {
+    color: white;
+}
+
+.nav-list a:visited {
+    color: #ccc;
+}
+
+.nav-list a:hover {
+    background-color: #007BFF;
+    color: white;
+    text-decoration: underline;
+}
+
+.nav-list a:active {
+    background-color: #0056b3;
+}
+
+/* ============================================
+   EXERCISE 6: IMPORTANT LINKS STYLING
+   ============================================ */
+
+.links-demo {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.important-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.important-links li {
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    padding-left: 1rem;
+}
+
+.important-links a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.important-links a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* ============================================
+   EXERCISE 7: TABLE STYLING
+   ============================================ */
+
+.events-admin {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+/* Exercise 7: Styling table header */
+th {
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Exercise 7: Styling table data cells */
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Exercise 7: Zebra striping using nth-child */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+    background-color: #e8f4f8;
+    transition: background-color 0.3s ease;
+}
+
+/* ============================================
+   EXERCISE 8: BOX MODEL & LAYOUT CONTROL
+   ============================================ */
+
+.box-model-demo {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+/* Exercise 8: Box Model with border, padding, margin */
+.box-example {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 3px solid #007BFF;
+    background-color: #e7f3ff;
+    border-radius: 5px;
+}
+
+/* Exercise 8: Outline property */
+.box-example-outline {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    outline: 3px dashed #ff6b6b;
+    background-color: #ffe0e0;
+    border-radius: 5px;
+}
+
+/* Exercise 8: Visibility vs Display */
+.hidden-text {
+    visibility: hidden;
+    height: 50px;
+    background-color: #ddd;
+}
+
+.display-none {
+    display: none;
+}
+
+/* ============================================
+   EXERCISE 9: MULTIPLE COLUMNS
+   ============================================ */
+
+.news-bulletin {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+/* Exercise 9: Multi-column layout */
+.multi-column-text {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid #ddd;
+    text-align: justify;
+}
+
+/* ============================================
+   EXERCISE 8: FORM STYLING
+   ============================================ */
+
+.form-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.submit-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* ============================================
+   EXERCISE 10: RESPONSIVE WEB DESIGN - MEDIA QUERIES
+   ============================================ */
+
+.responsive-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.responsive-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Exercise 10: Media Query for tablets (768px and below) */
+@media (max-width: 768px) {
+    /* Stack navigation vertically */
+    .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Reduce container spacing */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .eventCard {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Adjust header text size */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Multi-column layout for tablet */
+    .multi-column-text {
+        column-count: 1;
+    }
+
+    /* Responsive grid - 2 columns */
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Form width adjustment */
+    .form-section {
+        margin: 2rem 1rem;
+    }
+}
+
+/* Exercise 10: Media Query for mobile phones (480px and below) */
+@media (max-width: 480px) {
+    /* Increase base font size for better readability on mobile */
+    html {
+        font-size: 14px;
+    }
+
+    /* Stack header vertically */
+    .header-section {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Single column for event cards */
+    .container {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .eventCard {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    /* Hide or reduce table functionality for mobile */
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    /* Single column responsive grid */
+    .responsive-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Form adjustment for mobile */
+    .form-section {
+        padding: 1rem;
+        margin: 1rem 0.5rem;
+    }
+
+    /* Flexible column layout on mobile */
+    .multi-column-text {
+        column-count: 1;
+        text-align: left;
+    }
+
+    /* Navbar link spacing */
+    .nav-list {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-list li {
+        margin: 0;
+    }
+
+    .nav-list a {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Use flexible units for responsive sizing */
+    .eventCard p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   FOOTER STYLING
+   ============================================ */
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   ACCESSIBILITY & UTILITY CLASSES
+   ============================================ */
+
+/* Exercise 2: Well-commented utility classes */
+/* Utility class for visual focus highlight (for form fields) */
+:focus-visible {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+}
+
+/* Text alignment utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Spacing utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
